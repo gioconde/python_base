@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "base"
+version = "0.1.0"
+description = ""
+authors = ["Gioconde Deitos <gioconded@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.87.0"
+httpx = "^0.23.3"
+trio = "^0.22.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.14.5"
+pytest = "^7.1.2"
+pre-commit = "^2.20.0"
+black = "^22.6.0"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -vv"
+testpaths = [
+    "src"
+]
+
+[tool.pylint.main]
+ignore = [
+    ".pytest_cache",
+    ".git",
+    ".venv",
+    "__pycache__"
+]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "R0801, W1510, E0401, C0114, E0611"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
