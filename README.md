@@ -12,3 +12,6 @@ Projeto base para aplicações python.
 - [x] pre-commit
 - [x] black
 - [x] fastapi
+
+## Instalação
+Após `poetry update`, rodar o comando `pre-commit install`.
